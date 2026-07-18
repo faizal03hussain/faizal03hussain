@@ -151,12 +151,12 @@
         
         <g transform="translate(0, 35)">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Education</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">B.Tech in AI & Data Science, REVA University</text>
+            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">B.Tech in AI &amp; Data Science, REVA University</text>
         </g>
         
         <g transform="translate(0, 70)">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Current Focus</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">Enterprise RAG & Agentic AI Systems</text>
+            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">Enterprise RAG &amp; Agentic AI Systems</text>
         </g>
         
         <g transform="translate(0, 105)">

@@ -1,4 +1,5 @@
 import os
+import xml.sax.saxutils as saxutils
 
 def generate_svg(theme):
     is_dark = theme == 'dark'
@@ -40,7 +41,8 @@ def generate_svg(theme):
     ascii_lines = ascii_art.split("\n")
     ascii_svg = ""
     for idx, line in enumerate(ascii_lines):
-        ascii_svg += f'<text x="20" y="{30 + idx*14}" font-family="monospace" font-size="12" fill="url(#ascii_grad_{theme})">{line.replace(" ", "&#160;")}</text>\n'
+        escaped_line = saxutils.escape(line).replace(" ", "&#160;")
+        ascii_svg += f'<text x="20" y="{30 + idx*14}" font-family="monospace" font-size="12" fill="url(#ascii_grad_{theme})">{escaped_line}</text>\n'
 
     roles = [
         "Agentic AI Platform Engineer",
@@ -51,11 +53,10 @@ def generate_svg(theme):
     
     typing_svg = ""
     for i, role in enumerate(roles):
-        char_width = 9.6
-        max_w = len(role) * char_width
+        escaped_role = saxutils.escape(role)
         typing_svg += f"""
         <g class="role-group role-{i}">
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="{acc_2}">{role}</text>
+            <text x="0" y="0" font-family="monospace" font-size="16" fill="{acc_2}">{escaped_role}</text>
         </g>
         """
         
@@ -69,10 +70,12 @@ def generate_svg(theme):
     
     info_svg = ""
     for i, (k, v) in enumerate(info_items):
+        escaped_k = saxutils.escape(k)
+        escaped_v = saxutils.escape(v)
         info_svg += f"""
         <g transform="translate(0, {i*35})">
-            <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="{secondary_text}">{k}</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="{primary_text}">{v}</text>
+            <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="{secondary_text}">{escaped_k}</text>
+            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="{primary_text}">{escaped_v}</text>
         </g>
         """
 
@@ -81,6 +84,7 @@ def generate_svg(theme):
     x_offset = 0
     y_offset = 0
     for i, skill in enumerate(skills):
+        escaped_skill = saxutils.escape(skill)
         w = len(skill) * 8 + 30
         if x_offset + w > 600:
             x_offset = 0
@@ -89,7 +93,7 @@ def generate_svg(theme):
         skills_svg += f"""
         <g transform="translate({x_offset}, {y_offset})">
             <rect width="{w}" height="30" rx="15" fill="{panel_bg}" stroke="{acc_1}" stroke-opacity="0.4" stroke-width="1" />
-            <text x="{w/2}" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="{primary_text}" text-anchor="middle">{skill}</text>
+            <text x="{w/2}" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="{primary_text}" text-anchor="middle">{escaped_skill}</text>
         </g>
         """
         x_offset += w + 10
@@ -97,10 +101,11 @@ def generate_svg(theme):
     socials = ["GitHub", "LinkedIn", "Website", "Email"]
     social_svg = ""
     for i, s in enumerate(socials):
+        escaped_s = saxutils.escape(s)
         social_svg += f"""
         <g transform="translate({i*100}, 0)">
             <rect width="85" height="30" rx="6" fill="{panel_bg}" stroke="{border}" stroke-width="1" />
-            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="{primary_text}" text-anchor="middle">{s}</text>
+            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="{primary_text}" text-anchor="middle">{escaped_s}</text>
         </g>
         """
 
