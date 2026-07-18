@@ -1,24 +1,57 @@
 <svg width="1180" height="610" viewBox="0 0 1180 610" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        
-    <linearGradient id="ascii_grad_dark" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#7C3AED" />
-        <stop offset="50%" stop-color="#22D3EE" />
-        <stop offset="100%" stop-color="#10B981" />
-        <animate attributeName="x1" values="0%;100%;0%" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="y1" values="0%;100%;0%" dur="13s" repeatCount="indefinite" />
-        <animate attributeName="x2" values="100%;0%;100%" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="y2" values="100%;0%;100%" dur="13s" repeatCount="indefinite" />
-    </linearGradient>
+        <style>
+            
+        @keyframes floatAnim {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(8px); }
+        }
+        @keyframes scanlineAnim {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(530px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes blinkAnim {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        @keyframes role0 {
+            0%, 22% { opacity: 1; }
+            25%, 100% { opacity: 0; }
+        }
+        @keyframes role1 {
+            0%, 24% { opacity: 0; }
+            25%, 47% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        @keyframes role2 {
+            0%, 49% { opacity: 0; }
+            50%, 72% { opacity: 1; }
+            75%, 100% { opacity: 0; }
+        }
+        @keyframes role3 {
+            0%, 74% { opacity: 0; }
+            75%, 98% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .ascii-float { animation: floatAnim 6s ease-in-out infinite; }
+        .scanline { animation: scanlineAnim 8s linear infinite; }
+        .cursor { animation: blinkAnim 0.8s infinite; }
+        .role-0 { animation: role0 12s infinite; }
+        .role-1 { animation: role1 12s infinite; }
+        .role-2 { animation: role2 12s infinite; }
+        .role-3 { animation: role3 12s infinite; }
     
+        </style>
+        <linearGradient id="ascii_grad_dark" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#7C3AED" />
+            <stop offset="50%" stop-color="#22D3EE" />
+            <stop offset="100%" stop-color="#10B981" />
+        </linearGradient>
         <radialGradient id="bg_grad_dark" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.1" />
+            <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.12" />
             <stop offset="100%" stop-color="#030712" stop-opacity="1" />
         </radialGradient>
-        <filter id="glow_dark" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="10" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
         <clipPath id="canvas_clip">
             <rect width="1180" height="610" rx="16" />
         </clipPath>
@@ -28,62 +61,37 @@
     <rect width="1180" height="610" rx="16" fill="url(#bg_grad_dark)" />
     
     <g clip-path="url(#canvas_clip)">
-        <circle cx="228" cy="25" r="2.4831009995196656" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="25;-75;25" dur="12.448918538034762s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="6.224459269017381s" repeatCount="indefinite"/></circle>
-<circle cx="285" cy="104" r="2.3533989748458226" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="104;4;104" dur="18.921795677048454s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="9.460897838524227s" repeatCount="indefinite"/></circle>
-<circle cx="178" cy="604" r="1.8438436393705409" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="604;504;604" dur="10.297972194380703s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="5.148986097190352s" repeatCount="indefinite"/></circle>
-<circle cx="447" cy="238" r="2.0107105762067246" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="238;138;238" dur="10.265359696838637s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="5.132679848419318s" repeatCount="indefinite"/></circle>
-<circle cx="407" cy="558" r="1.8390396419233175" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="558;458;558" dur="14.492090462838537s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="7.246045231419268s" repeatCount="indefinite"/></circle>
-<circle cx="569" cy="6" r="2.5176147342595345" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="6;-94;6" dur="11.596593163768901s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="5.7982965818844505s" repeatCount="indefinite"/></circle>
-<circle cx="865" cy="348" r="1.5557426833432837" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="348;248;348" dur="12.153137621075889s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="6.076568810537944s" repeatCount="indefinite"/></circle>
-<circle cx="689" cy="104" r="1.1854916867602958" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="104;4;104" dur="10.96716376833464s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="5.48358188416732s" repeatCount="indefinite"/></circle>
-<circle cx="704" cy="270" r="2.61425654654876" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="270;170;270" dur="17.29731786693818s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="8.64865893346909s" repeatCount="indefinite"/></circle>
-<circle cx="1098" cy="127" r="2.946231527958741" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="127;27;127" dur="13.785343772083536s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="6.892671886041768s" repeatCount="indefinite"/></circle>
-<circle cx="1130" cy="300" r="2.6588093285059897" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="300;200;300" dur="16.18519752364246s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="8.09259876182123s" repeatCount="indefinite"/></circle>
-<circle cx="740" cy="591" r="1.3845771805133198" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="591;491;591" dur="10.69555148823741s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="5.347775744118705s" repeatCount="indefinite"/></circle>
-<circle cx="466" cy="296" r="2.9704430413215155" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="296;196;296" dur="18.553177210151468s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="9.276588605075734s" repeatCount="indefinite"/></circle>
-<circle cx="206" cy="389" r="1.5559472062201842" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="389;289;389" dur="16.356844442644004s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="8.178422221322002s" repeatCount="indefinite"/></circle>
-<circle cx="747" cy="166" r="1.7403619342337653" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="166;66;166" dur="12.095070307714877s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="6.047535153857439s" repeatCount="indefinite"/></circle>
-<circle cx="546" cy="73" r="2.2182620113339766" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="73;-27;73" dur="11.71138648198097s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="5.855693240990485s" repeatCount="indefinite"/></circle>
-<circle cx="501" cy="167" r="1.9245204237022315" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="167;67;167" dur="12.69947826784278s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="6.34973913392139s" repeatCount="indefinite"/></circle>
-<circle cx="1140" cy="224" r="2.369228501979749" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="224;124;224" dur="18.428519201898098s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="9.214259600949049s" repeatCount="indefinite"/></circle>
-<circle cx="114" cy="234" r="2.6436051880136167" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="234;134;234" dur="18.050458007712145s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="9.025229003856072s" repeatCount="indefinite"/></circle>
-<circle cx="821" cy="274" r="1.1323772104230945" fill="#22D3EE" opacity="0.2"><animate attributeName="cy" values="274;174;274" dur="19.13136124185545s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="9.565680620927726s" repeatCount="indefinite"/></circle>
-
-        
         <!-- Left Panel -->
         <g transform="translate(40, 40)">
-            <rect width="400" height="530" rx="12" fill="#0F172A" fill-opacity="0.8" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <rect width="400" height="530" rx="12" fill="#0F172A" fill-opacity="0.85" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
             
             <!-- Scanline effect -->
-            <rect width="400" height="4" fill="#22D3EE" opacity="0.3" filter="url(#glow_dark)">
-                <animate attributeName="y" values="0;530;0" dur="8s" repeatCount="indefinite" />
-            </rect>
+            <rect class="scanline" width="400" height="3" fill="#22D3EE" opacity="0.4" />
             
             <!-- ASCII floating container -->
-            <g>
-                <animateTransform attributeName="transform" type="translate" values="0,0; 0,10; 0,0" dur="6s" repeatCount="indefinite" />
+            <g class="ascii-float">
                 <g transform="translate(30, 80)">
-                    <text x="20" y="30" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.0s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.,-:;//;:=,</text>
-<text x="20" y="44" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.1s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;:H@@@MM@M#H/.,+%;,</text>
-<text x="20" y="58" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.2s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;,/X+&#160;+M@@M@MM%=,-%HMMM@X/,</text>
-<text x="20" y="72" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.3s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;-+@MM;&#160;$M@@MH+-,;XMMMM@MMMM@+-</text>
-<text x="20" y="86" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.4s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;;@M@@M-&#160;XM@X;.&#160;-+XXXXXHHH@M@M#@/.</text>
-<text x="20" y="100" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.5s" fill="freeze" begin="0s" />&#160;&#160;,%MM@@MH&#160;,@%=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.---=-=:=,.</text>
-<text x="20" y="114" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.6s" fill="freeze" begin="0s" />&#160;&#160;=@#@@@MX.,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%HX$$%%%:;</text>
-<text x="20" y="128" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.7s" fill="freeze" begin="0s" />&#160;=-./@M@M$&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.;@MMMM@MM:</text>
-<text x="20" y="142" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.8s" fill="freeze" begin="0s" />&#160;X@/&#160;-$MM/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;+MM@@@M$</text>
-<text x="20" y="156" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="2.9s" fill="freeze" begin="0s" />,@M@H:&#160;:@:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;=X#@@@@-</text>
-<text x="20" y="170" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.0s" fill="freeze" begin="0s" />,@@@MMX,&#160;.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/H-&#160;;@M@M=</text>
-<text x="20" y="184" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.1s" fill="freeze" begin="0s" />.H@@@@M@+,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;%MM+..%#$.</text>
-<text x="20" y="198" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.2s" fill="freeze" begin="0s" />&#160;/MM@@@MMH,.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;XM@MH;&#160;=;</text>
-<text x="20" y="212" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.3s" fill="freeze" begin="0s" />&#160;&#160;/%+%$XHH@$=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,&#160;.H@@@@MX,</text>
-<text x="20" y="226" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.4000000000000004s" fill="freeze" begin="0s" />&#160;&#160;&#160;.=--------.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%H.,@@@@@MX,</text>
-<text x="20" y="240" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.5s" fill="freeze" begin="0s" />&#160;&#160;&#160;.%MM@@@HHHXX$$$%+-&#160;.:$MMX&#160;=M@@MM%.</text>
-<text x="20" y="254" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.6s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;=XMMM@MM@MM#H;,-+HMM@M+&#160;/MMMX=</text>
-<text x="20" y="268" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.7s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;=%@M@M#@$-.=$@MM@@@M;&#160;%M%=</text>
-<text x="20" y="282" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.8s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,:+$+-,/H#MMMMMMM@=&#160;=,</text>
-<text x="20" y="296" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="3.9000000000000004s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;=++%%%%+/:-.</text>
-<text x="20" y="310" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="4.0s" fill="freeze" begin="0s" />&#160;&#160;&#160;&#160;</text>
+                    <text x="20" y="30" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.,-:;//;:=,</text>
+<text x="20" y="44" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;:H@@@MM@M#H/.,+%;,</text>
+<text x="20" y="58" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;,/X+&#160;+M@@M@MM%=,-%HMMM@X/,</text>
+<text x="20" y="72" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;-+@MM;&#160;$M@@MH+-,;XMMMM@MMMM@+-</text>
+<text x="20" y="86" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;;@M@@M-&#160;XM@X;.&#160;-+XXXXXHHH@M@M#@/.</text>
+<text x="20" y="100" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;,%MM@@MH&#160;,@%=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.---=-=:=,.</text>
+<text x="20" y="114" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;=@#@@@MX.,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%HX$$%%%:;</text>
+<text x="20" y="128" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;=-./@M@M$&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.;@MMMM@MM:</text>
+<text x="20" y="142" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;X@/&#160;-$MM/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;+MM@@@M$</text>
+<text x="20" y="156" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">,@M@H:&#160;:@:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;=X#@@@@-</text>
+<text x="20" y="170" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">,@@@MMX,&#160;.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/H-&#160;;@M@M=</text>
+<text x="20" y="184" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">.H@@@@M@+,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;%MM+..%#$.</text>
+<text x="20" y="198" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;/MM@@@MMH,.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;XM@MH;&#160;=;</text>
+<text x="20" y="212" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;/%+%$XHH@$=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,&#160;.H@@@@MX,</text>
+<text x="20" y="226" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;.=--------.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%H.,@@@@@MX,</text>
+<text x="20" y="240" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;.%MM@@@HHHXX$$$%+-&#160;.:$MMX&#160;=M@@MM%.</text>
+<text x="20" y="254" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;=XMMM@MM@MM#H;,-+HMM@M+&#160;/MMMX=</text>
+<text x="20" y="268" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;=%@M@M#@$-.=$@MM@@@M;&#160;%M%=</text>
+<text x="20" y="282" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,:+$+-,/H#MMMMMMM@=&#160;=,</text>
+<text x="20" y="296" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;=++%%%%+/:-.</text>
+<text x="20" y="310" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;</text>
 
                 </g>
             </g>
@@ -91,119 +99,72 @@
         
         <!-- Right Panel -->
         <g transform="translate(460, 40)">
-            <rect width="680" height="530" rx="12" fill="#0F172A" fill-opacity="0.6" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <rect width="680" height="530" rx="12" fill="#0F172A" fill-opacity="0.7" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
             
             <!-- Terminal Header -->
-            <rect width="680" height="40" rx="12" fill="rgba(255,255,255,0.08)" opacity="0.5" />
+            <rect width="680" height="40" rx="12" fill="rgba(255,255,255,0.08)" opacity="0.6" />
             <circle cx="20" cy="20" r="6" fill="#EF4444" />
             <circle cx="40" cy="20" r="6" fill="#F59E0B" />
             <circle cx="60" cy="20" r="6" fill="#10B981" />
+            <text x="340" y="24" font-family="monospace" font-size="12" fill="#94A3B8" text-anchor="middle">faizal03hussain@terminal ~</text>
             
             <!-- Content -->
             <g transform="translate(40, 80)">
                 <!-- Greeting -->
-                <g opacity="0">
-                    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze" />
-                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#F8FAFC">Hi 👋</text>
-                    <text x="0" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="#F8FAFC">I'm Faizal Hussain</text>
+                <g>
+                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#F8FAFC">Hi 👋</text>
+                    <text x="0" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#F8FAFC">I'm Faizal Hussain</text>
                 </g>
                 
                 <!-- Roles Typing -->
-                <g transform="translate(0, 80)">
+                <g transform="translate(0, 75)">
                     
-        <g>
-            <clipPath id="clip_role_0_dark">
-                <rect x="0" y="-15" height="30" width="0">
-                    <animate attributeName="width" values="0; 268.8; 268.8; 0; 0" keyTimes="0; 0.08333333333333333; 0.20833333333333334; 0.25; 1" dur="12s" repeatCount="indefinite" />
-                </rect>
-            </clipPath>
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE" clip-path="url(#clip_role_0_dark)">Agentic AI Platform Engineer</text>
-            <rect x="0" y="-12" width="8" height="16" fill="#22D3EE">
-                <animate attributeName="x" values="0; 268.8; 268.8; 0; 0" keyTimes="0; 0.08333333333333333; 0.20833333333333334; 0.25; 1" dur="12s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" />
-            </rect>
+        <g class="role-group role-0">
+            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">Agentic AI Platform Engineer</text>
         </g>
         
-        <g>
-            <clipPath id="clip_role_1_dark">
-                <rect x="0" y="-15" height="30" width="0">
-                    <animate attributeName="width" values="0; 0; 278.4; 278.4; 0; 0" keyTimes="0; 0.25; 0.3333333333333333; 0.45833333333333337; 0.5; 1" dur="12s" repeatCount="indefinite" />
-                </rect>
-            </clipPath>
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE" clip-path="url(#clip_role_1_dark)">Multi-Agent Systems Architect</text>
-            <rect x="0" y="-12" width="8" height="16" fill="#22D3EE">
-                <animate attributeName="x" values="0; 0; 278.4; 278.4; 0; 0" keyTimes="0; 0.25; 0.3333333333333333; 0.45833333333333337; 0.5; 1" dur="12s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" />
-            </rect>
+        <g class="role-group role-1">
+            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">Multi-Agent Systems Architect</text>
         </g>
         
-        <g>
-            <clipPath id="clip_role_2_dark">
-                <rect x="0" y="-15" height="30" width="0">
-                    <animate attributeName="width" values="0; 0; 115.19999999999999; 115.19999999999999; 0; 0" keyTimes="0; 0.5; 0.5833333333333334; 0.7083333333333334; 0.75; 1" dur="12s" repeatCount="indefinite" />
-                </rect>
-            </clipPath>
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE" clip-path="url(#clip_role_2_dark)">NLP Engineer</text>
-            <rect x="0" y="-12" width="8" height="16" fill="#22D3EE">
-                <animate attributeName="x" values="0; 0; 115.19999999999999; 115.19999999999999; 0; 0" keyTimes="0; 0.5; 0.5833333333333334; 0.7083333333333334; 0.75; 1" dur="12s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" />
-            </rect>
+        <g class="role-group role-2">
+            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">NLP Engineer</text>
         </g>
         
-        <g>
-            <clipPath id="clip_role_3_dark">
-                <rect x="0" y="-15" height="30" width="0">
-                    <animate attributeName="width" values="0; 0; 259.2; 259.2; 0; 0" keyTimes="0; 0.75; 0.8333333333333334; 0.9583333333333334; 1.0; 1" dur="12s" repeatCount="indefinite" />
-                </rect>
-            </clipPath>
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE" clip-path="url(#clip_role_3_dark)">Software Associate @ Oracle</text>
-            <rect x="0" y="-12" width="8" height="16" fill="#22D3EE">
-                <animate attributeName="x" values="0; 0; 259.2; 259.2; 0; 0" keyTimes="0; 0.75; 0.8333333333333334; 0.9583333333333334; 1.0; 1" dur="12s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" />
-            </rect>
+        <g class="role-group role-3">
+            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">Software Associate @ Oracle</text>
         </g>
         
+                    <rect class="cursor" x="275" y="-14" width="8" height="18" fill="#22D3EE" />
                 </g>
                 
                 <!-- Divider -->
-                <rect x="0" y="110" width="600" height="1" fill="rgba(255,255,255,0.08)" opacity="0">
-                    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze" />
-                </rect>
+                <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
                 
                 <!-- Info Grid -->
-                <g transform="translate(0, 140)">
+                <g transform="translate(0, 135)">
                     
-        <g opacity="0" transform="translate(0, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,10; 0,0" dur="0.5s" begin="1.5s" fill="freeze" />
+        <g transform="translate(0, 0)">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Location</text>
             <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">Bengaluru, India</text>
         </g>
         
-        <g opacity="0" transform="translate(0, 35)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.8s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,45; 0,35" dur="0.5s" begin="1.8s" fill="freeze" />
+        <g transform="translate(0, 35)">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Education</text>
             <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">B.Tech in AI & Data Science, REVA University</text>
         </g>
         
-        <g opacity="0" transform="translate(0, 70)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.1s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,80; 0,70" dur="0.5s" begin="2.1s" fill="freeze" />
+        <g transform="translate(0, 70)">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Current Focus</text>
             <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">Enterprise RAG & Agentic AI Systems</text>
         </g>
         
-        <g opacity="0" transform="translate(0, 105)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.4s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,115; 0,105" dur="0.5s" begin="2.4s" fill="freeze" />
+        <g transform="translate(0, 105)">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Portfolio</text>
             <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">faizalhussain.in</text>
         </g>
         
-        <g opacity="0" transform="translate(0, 140)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.7s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,150; 0,140" dur="0.5s" begin="2.7s" fill="freeze" />
+        <g transform="translate(0, 140)">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Email</text>
             <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">faizal03hussain@gmail.com</text>
         </g>
@@ -212,118 +173,67 @@
                 
                 <!-- Skills -->
                 <g transform="translate(0, 320)">
-                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#F8FAFC" opacity="0">
-                        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.8s" fill="freeze" />
-                        Technical Arsenal
-                    </text>
-                    <g transform="translate(0, 20)">
+                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#F8FAFC">Technical Focus</text>
+                    <g transform="translate(0, 18)">
                         
-        <g opacity="0" transform="translate(0, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.0s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,10; 0,0" dur="0.5s" begin="3.0s" fill="freeze" />
-            <rect width="78" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="3.0s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate(0, 0)">
+            <rect width="78" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
             <text x="39.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Python</text>
         </g>
         
-        <g opacity="0" transform="translate(88, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.1s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="88,10; 88,0" dur="0.5s" begin="3.1s" fill="freeze" />
-            <rect width="62" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="3.6s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate(88, 0)">
+            <rect width="62" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
             <text x="31.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Java</text>
         </g>
         
-        <g opacity="0" transform="translate(160, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.2s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="160,10; 160,0" dur="0.5s" begin="3.2s" fill="freeze" />
-            <rect width="110" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="4.2s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate(160, 0)">
+            <rect width="110" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
             <text x="55.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Agentic AI</text>
         </g>
         
-        <g opacity="0" transform="translate(280, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.3s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="280,10; 280,0" dur="0.5s" begin="3.3s" fill="freeze" />
-            <rect width="54" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="4.8s" repeatCount="indefinite" />
-            </rect>
-            <text x="27.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">RAG</text>
+        <g transform="translate(280, 0)">
+            <rect width="134" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
+            <text x="67.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">RAG Pipelines</text>
         </g>
         
-        <g opacity="0" transform="translate(344, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.4s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="344,10; 344,0" dur="0.5s" begin="3.4s" fill="freeze" />
-            <rect width="118" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="5.4s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate(424, 0)">
+            <rect width="118" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
             <text x="59.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Spring Boot</text>
         </g>
         
-        <g opacity="0" transform="translate(472, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.5s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="472,10; 472,0" dur="0.5s" begin="3.5s" fill="freeze" />
-            <rect width="126" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="6.0s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate(0, 40)">
+            <rect width="126" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
             <text x="63.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Oracle Cloud</text>
         </g>
         
-        <g opacity="0" transform="translate(0, 40)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.6s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,50; 0,40" dur="0.5s" begin="3.6s" fill="freeze" />
-            <rect width="86" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="6.6s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate(136, 40)">
+            <rect width="86" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
             <text x="43.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
         </g>
         
-        <g opacity="0" transform="translate(96, 40)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.7s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="96,50; 96,40" dur="0.5s" begin="3.7s" fill="freeze" />
-            <rect width="182" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="7.2s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate(232, 40)">
+            <rect width="182" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
             <text x="91.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Multi-Agent Systems</text>
         </g>
         
-        <g opacity="0" transform="translate(288, 40)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.8s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="288,50; 288,40" dur="0.5s" begin="3.8s" fill="freeze" />
-            <rect width="54" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="7.8s" repeatCount="indefinite" />
-            </rect>
-            <text x="27.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">SQL</text>
+        <g transform="translate(424, 40)">
+            <rect width="134" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
+            <text x="67.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Vector Search</text>
         </g>
         
-        <g opacity="0" transform="translate(352, 40)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="3.9s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="352,50; 352,40" dur="0.5s" begin="3.9s" fill="freeze" />
-            <rect width="54" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="8.4s" repeatCount="indefinite" />
-            </rect>
-            <text x="27.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">GCP</text>
+        <g transform="translate(0, 80)">
+            <rect width="126" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
+            <text x="63.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Google Cloud</text>
         </g>
         
-        <g opacity="0" transform="translate(416, 40)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.0s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="416,50; 416,40" dur="0.5s" begin="4.0s" fill="freeze" />
-            <rect width="62" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="9.0s" repeatCount="indefinite" />
-            </rect>
-            <text x="31.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">LLMs</text>
+        <g transform="translate(136, 80)">
+            <rect width="166" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
+            <text x="83.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">LLM Orchestration</text>
         </g>
         
-        <g opacity="0" transform="translate(488, 40)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.1s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="488,50; 488,40" dur="0.5s" begin="4.1s" fill="freeze" />
-            <rect width="54" height="30" rx="15" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1">
-                <animate attributeName="stroke" values="rgba(255,255,255,0.08);#7C3AED;rgba(255,255,255,0.08)" dur="3s" begin="9.6s" repeatCount="indefinite" />
-            </rect>
-            <text x="27.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">NLP</text>
+        <g transform="translate(312, 80)">
+            <rect width="102" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
+            <text x="51.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">LangChain</text>
         </g>
         
                     </g>
@@ -332,28 +242,24 @@
                 <!-- Social Icons (Bottom) -->
                 <g transform="translate(0, 425)">
                     
-        <g opacity="0" transform="translate(0, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.5s" fill="freeze" />
-            <rect width="80" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="40" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">GitHub</text>
+        <g transform="translate(0, 0)">
+            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">GitHub</text>
         </g>
         
-        <g opacity="0" transform="translate(100, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.7s" fill="freeze" />
-            <rect width="80" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="40" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">LinkedIn</text>
+        <g transform="translate(100, 0)">
+            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">LinkedIn</text>
         </g>
         
-        <g opacity="0" transform="translate(200, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="4.9s" fill="freeze" />
-            <rect width="80" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="40" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Twitter</text>
+        <g transform="translate(200, 0)">
+            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Website</text>
         </g>
         
-        <g opacity="0" transform="translate(300, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="5.1s" fill="freeze" />
-            <rect width="80" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="40" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Portfolio</text>
+        <g transform="translate(300, 0)">
+            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Email</text>
         </g>
         
                 </g>

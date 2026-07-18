@@ -9,33 +9,9 @@ def generate_svg(theme):
     primary_text = '#F8FAFC' if is_dark else '#0F172A'
     secondary_text = '#94A3B8' if is_dark else '#475569'
     
-    # Gradients
     acc_1 = '#7C3AED' if is_dark else '#2563EB'
     acc_2 = '#22D3EE' if is_dark else '#06B6D4'
     acc_3 = '#10B981'
-    
-    ascii_gradient = f"""
-    <linearGradient id="ascii_grad_{theme}" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="{acc_1}" />
-        <stop offset="50%" stop-color="{acc_2}" />
-        <stop offset="100%" stop-color="{acc_3}" />
-        <animate attributeName="x1" values="0%;100%;0%" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="y1" values="0%;100%;0%" dur="13s" repeatCount="indefinite" />
-        <animate attributeName="x2" values="100%;0%;100%" dur="10s" repeatCount="indefinite" />
-        <animate attributeName="y2" values="100%;0%;100%" dur="13s" repeatCount="indefinite" />
-    </linearGradient>
-    """
-
-    # Particle generator
-    particles = ""
-    import random
-    random.seed(42)
-    for i in range(20):
-        x = random.randint(0, 1180)
-        y = random.randint(0, 610)
-        r = random.uniform(1, 3)
-        dur = random.uniform(10, 20)
-        particles += f'<circle cx="{x}" cy="{y}" r="{r}" fill="{acc_2}" opacity="0.2"><animate attributeName="cy" values="{y};{y-100};{y}" dur="{dur}s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="{dur/2}s" repeatCount="indefinite"/></circle>\n'
 
     # ASCII Art
     ascii_art = r"""
@@ -64,9 +40,7 @@ def generate_svg(theme):
     ascii_lines = ascii_art.split("\n")
     ascii_svg = ""
     for idx, line in enumerate(ascii_lines):
-        # Reveal line by line
-        delay = idx * 0.1
-        ascii_svg += f'<text x="20" y="{30 + idx*14}" font-family="monospace" font-size="12" fill="url(#ascii_grad_{theme})" opacity="0"><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.1;1" dur="{2 + delay}s" fill="freeze" begin="0s" />{line.replace(" ", "&#160;")}</text>\n'
+        ascii_svg += f'<text x="20" y="{30 + idx*14}" font-family="monospace" font-size="12" fill="url(#ascii_grad_{theme})">{line.replace(" ", "&#160;")}</text>\n'
 
     roles = [
         "Agentic AI Platform Engineer",
@@ -76,34 +50,12 @@ def generate_svg(theme):
     ]
     
     typing_svg = ""
-    total_dur = 12
     for i, role in enumerate(roles):
         char_width = 9.6
         max_w = len(role) * char_width
-        start_ratio = i * (3 / total_dur)
-        type_end = start_ratio + (1 / total_dur)
-        hold_end = start_ratio + (2.5 / total_dur)
-        del_end = start_ratio + (3 / total_dur)
-        
-        kt = f"0; {start_ratio}; {type_end}; {hold_end}; {del_end}; 1"
-        vw = f"0; 0; {max_w}; {max_w}; 0; 0"
-        
-        if i == 0:
-            kt = f"0; {type_end}; {hold_end}; {del_end}; 1"
-            vw = f"0; {max_w}; {max_w}; 0; 0"
-            
         typing_svg += f"""
-        <g>
-            <clipPath id="clip_role_{i}_{theme}">
-                <rect x="0" y="-15" height="30" width="0">
-                    <animate attributeName="width" values="{vw}" keyTimes="{kt}" dur="{total_dur}s" repeatCount="indefinite" />
-                </rect>
-            </clipPath>
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="{acc_2}" clip-path="url(#clip_role_{i}_{theme})">{role}</text>
-            <rect x="0" y="-12" width="8" height="16" fill="{acc_2}">
-                <animate attributeName="x" values="{vw}" keyTimes="{kt}" dur="{total_dur}s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" />
-            </rect>
+        <g class="role-group role-{i}">
+            <text x="0" y="0" font-family="monospace" font-size="16" fill="{acc_2}">{role}</text>
         </g>
         """
         
@@ -117,62 +69,97 @@ def generate_svg(theme):
     
     info_svg = ""
     for i, (k, v) in enumerate(info_items):
-        delay = 1.5 + (i * 0.3)
         info_svg += f"""
-        <g opacity="0" transform="translate(0, {i*35})">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="{delay}s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="0,{i*35 + 10}; 0,{i*35}" dur="0.5s" begin="{delay}s" fill="freeze" />
+        <g transform="translate(0, {i*35})">
             <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="{secondary_text}">{k}</text>
             <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="{primary_text}">{v}</text>
         </g>
         """
 
-    skills = ["Python", "Java", "Agentic AI", "RAG", "Spring Boot", "Oracle Cloud", "FastAPI", "Multi-Agent Systems", "SQL", "GCP", "LLMs", "NLP"]
+    skills = ["Python", "Java", "Agentic AI", "RAG Pipelines", "Spring Boot", "Oracle Cloud", "FastAPI", "Multi-Agent Systems", "Vector Search", "Google Cloud", "LLM Orchestration", "LangChain"]
     skills_svg = ""
     x_offset = 0
     y_offset = 0
     for i, skill in enumerate(skills):
-        delay = 3 + (i * 0.1)
         w = len(skill) * 8 + 30
         if x_offset + w > 600:
             x_offset = 0
             y_offset += 40
             
         skills_svg += f"""
-        <g opacity="0" transform="translate({x_offset}, {y_offset})">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="{delay}s" fill="freeze" />
-            <animateTransform attributeName="transform" type="translate" values="{x_offset},{y_offset + 10}; {x_offset},{y_offset}" dur="0.5s" begin="{delay}s" fill="freeze" />
-            <rect width="{w}" height="30" rx="15" fill="{panel_bg}" stroke="{border}" stroke-width="1">
-                <animate attributeName="stroke" values="{border};{acc_1};{border}" dur="3s" begin="{delay + i*0.5}s" repeatCount="indefinite" />
-            </rect>
+        <g transform="translate({x_offset}, {y_offset})">
+            <rect width="{w}" height="30" rx="15" fill="{panel_bg}" stroke="{acc_1}" stroke-opacity="0.4" stroke-width="1" />
             <text x="{w/2}" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="{primary_text}" text-anchor="middle">{skill}</text>
         </g>
         """
         x_offset += w + 10
 
+    socials = ["GitHub", "LinkedIn", "Website", "Email"]
     social_svg = ""
-    socials = ["GitHub", "LinkedIn", "Twitter", "Portfolio"]
     for i, s in enumerate(socials):
-        delay = 4.5 + (i * 0.2)
         social_svg += f"""
-        <g opacity="0" transform="translate({i*100}, 0)">
-            <animate attributeName="opacity" values="0;1" dur="0.5s" begin="{delay}s" fill="freeze" />
-            <rect width="80" height="30" rx="6" fill="{panel_bg}" stroke="{border}" stroke-width="1" />
-            <text x="40" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="{primary_text}" text-anchor="middle">{s}</text>
+        <g transform="translate({i*100}, 0)">
+            <rect width="85" height="30" rx="6" fill="{panel_bg}" stroke="{border}" stroke-width="1" />
+            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="{primary_text}" text-anchor="middle">{s}</text>
         </g>
         """
 
+    css_styles = f"""
+        @keyframes floatAnim {{
+            0%, 100% {{ transform: translateY(0px); }}
+            50% {{ transform: translateY(8px); }}
+        }}
+        @keyframes scanlineAnim {{
+            0% {{ transform: translateY(0px); }}
+            50% {{ transform: translateY(530px); }}
+            100% {{ transform: translateY(0px); }}
+        }}
+        @keyframes blinkAnim {{
+            0%, 100% {{ opacity: 1; }}
+            50% {{ opacity: 0; }}
+        }}
+        @keyframes role0 {{
+            0%, 22% {{ opacity: 1; }}
+            25%, 100% {{ opacity: 0; }}
+        }}
+        @keyframes role1 {{
+            0%, 24% {{ opacity: 0; }}
+            25%, 47% {{ opacity: 1; }}
+            50%, 100% {{ opacity: 0; }}
+        }}
+        @keyframes role2 {{
+            0%, 49% {{ opacity: 0; }}
+            50%, 72% {{ opacity: 1; }}
+            75%, 100% {{ opacity: 0; }}
+        }}
+        @keyframes role3 {{
+            0%, 74% {{ opacity: 0; }}
+            75%, 98% {{ opacity: 1; }}
+            100% {{ opacity: 0; }}
+        }}
+        .ascii-float {{ animation: floatAnim 6s ease-in-out infinite; }}
+        .scanline {{ animation: scanlineAnim 8s linear infinite; }}
+        .cursor {{ animation: blinkAnim 0.8s infinite; }}
+        .role-0 {{ animation: role0 12s infinite; }}
+        .role-1 {{ animation: role1 12s infinite; }}
+        .role-2 {{ animation: role2 12s infinite; }}
+        .role-3 {{ animation: role3 12s infinite; }}
+    """
+
     svg = f"""<svg width="1180" height="610" viewBox="0 0 1180 610" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        {ascii_gradient}
+        <style>
+            {css_styles}
+        </style>
+        <linearGradient id="ascii_grad_{theme}" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="{acc_1}" />
+            <stop offset="50%" stop-color="{acc_2}" />
+            <stop offset="100%" stop-color="{acc_3}" />
+        </linearGradient>
         <radialGradient id="bg_grad_{theme}" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="{acc_1}" stop-opacity="0.1" />
+            <stop offset="0%" stop-color="{acc_1}" stop-opacity="0.12" />
             <stop offset="100%" stop-color="{bg}" stop-opacity="1" />
         </radialGradient>
-        <filter id="glow_{theme}" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="10" result="blur" />
-            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-        </filter>
         <clipPath id="canvas_clip">
             <rect width="1180" height="610" rx="16" />
         </clipPath>
@@ -182,20 +169,15 @@ def generate_svg(theme):
     <rect width="1180" height="610" rx="16" fill="url(#bg_grad_{theme})" />
     
     <g clip-path="url(#canvas_clip)">
-        {particles}
-        
         <!-- Left Panel -->
         <g transform="translate(40, 40)">
-            <rect width="400" height="530" rx="12" fill="{panel_bg}" fill-opacity="0.8" stroke="{border}" stroke-width="1" />
+            <rect width="400" height="530" rx="12" fill="{panel_bg}" fill-opacity="0.85" stroke="{border}" stroke-width="1" />
             
             <!-- Scanline effect -->
-            <rect width="400" height="4" fill="{acc_2}" opacity="0.3" filter="url(#glow_{theme})">
-                <animate attributeName="y" values="0;530;0" dur="8s" repeatCount="indefinite" />
-            </rect>
+            <rect class="scanline" width="400" height="3" fill="{acc_2}" opacity="0.4" />
             
             <!-- ASCII floating container -->
-            <g>
-                <animateTransform attributeName="transform" type="translate" values="0,0; 0,10; 0,0" dur="6s" repeatCount="indefinite" />
+            <g class="ascii-float">
                 <g transform="translate(30, 80)">
                     {ascii_svg}
                 </g>
@@ -204,45 +186,41 @@ def generate_svg(theme):
         
         <!-- Right Panel -->
         <g transform="translate(460, 40)">
-            <rect width="680" height="530" rx="12" fill="{panel_bg}" fill-opacity="0.6" stroke="{border}" stroke-width="1" />
+            <rect width="680" height="530" rx="12" fill="{panel_bg}" fill-opacity="0.7" stroke="{border}" stroke-width="1" />
             
             <!-- Terminal Header -->
-            <rect width="680" height="40" rx="12" fill="{border}" opacity="0.5" />
+            <rect width="680" height="40" rx="12" fill="{border}" opacity="0.6" />
             <circle cx="20" cy="20" r="6" fill="#EF4444" />
             <circle cx="40" cy="20" r="6" fill="#F59E0B" />
             <circle cx="60" cy="20" r="6" fill="#10B981" />
+            <text x="340" y="24" font-family="monospace" font-size="12" fill="{secondary_text}" text-anchor="middle">faizal03hussain@terminal ~</text>
             
             <!-- Content -->
             <g transform="translate(40, 80)">
                 <!-- Greeting -->
-                <g opacity="0">
-                    <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze" />
-                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="{primary_text}">Hi 👋</text>
-                    <text x="0" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="{primary_text}">I'm Faizal Hussain</text>
+                <g>
+                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="{primary_text}">Hi 👋</text>
+                    <text x="0" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="{primary_text}">I'm Faizal Hussain</text>
                 </g>
                 
                 <!-- Roles Typing -->
-                <g transform="translate(0, 80)">
+                <g transform="translate(0, 75)">
                     {typing_svg}
+                    <rect class="cursor" x="275" y="-14" width="8" height="18" fill="{acc_2}" />
                 </g>
                 
                 <!-- Divider -->
-                <rect x="0" y="110" width="600" height="1" fill="{border}" opacity="0">
-                    <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze" />
-                </rect>
+                <line x1="0" y1="100" x2="600" y2="100" stroke="{border}" stroke-width="1" />
                 
                 <!-- Info Grid -->
-                <g transform="translate(0, 140)">
+                <g transform="translate(0, 135)">
                     {info_svg}
                 </g>
                 
                 <!-- Skills -->
                 <g transform="translate(0, 320)">
-                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="{primary_text}" opacity="0">
-                        <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.8s" fill="freeze" />
-                        Technical Arsenal
-                    </text>
-                    <g transform="translate(0, 20)">
+                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="{primary_text}">Technical Focus</text>
+                    <g transform="translate(0, 18)">
                         {skills_svg}
                     </g>
                 </g>
