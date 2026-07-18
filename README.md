@@ -1,5 +1,5 @@
-![Faizal Hussain - Hero Banner](dark.svg#gh-dark-mode-only)
-![Faizal Hussain - Hero Banner](light.svg#gh-light-mode-only)
+![Faizal Hussain Hero Banner](https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/dark.svg#gh-dark-mode-only)
+![Faizal Hussain Hero Banner](https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/light.svg#gh-light-mode-only)
 
 # 💫 About Me
 

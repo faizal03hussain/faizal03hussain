@@ -1,55 +1,12 @@
 <svg width="1180" height="610" viewBox="0 0 1180 610" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <style>
-            
-        @keyframes floatAnim {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(8px); }
-        }
-        @keyframes scanlineAnim {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(530px); }
-            100% { transform: translateY(0px); }
-        }
-        @keyframes blinkAnim {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        @keyframes role0 {
-            0%, 22% { opacity: 1; }
-            25%, 100% { opacity: 0; }
-        }
-        @keyframes role1 {
-            0%, 24% { opacity: 0; }
-            25%, 47% { opacity: 1; }
-            50%, 100% { opacity: 0; }
-        }
-        @keyframes role2 {
-            0%, 49% { opacity: 0; }
-            50%, 72% { opacity: 1; }
-            75%, 100% { opacity: 0; }
-        }
-        @keyframes role3 {
-            0%, 74% { opacity: 0; }
-            75%, 98% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        .ascii-float { animation: floatAnim 6s ease-in-out infinite; }
-        .scanline { animation: scanlineAnim 8s linear infinite; }
-        .cursor { animation: blinkAnim 0.8s infinite; }
-        .role-0 { animation: role0 12s infinite; }
-        .role-1 { animation: role1 12s infinite; }
-        .role-2 { animation: role2 12s infinite; }
-        .role-3 { animation: role3 12s infinite; }
-    
-        </style>
         <linearGradient id="ascii_grad_dark" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" stop-color="#7C3AED" />
             <stop offset="50%" stop-color="#22D3EE" />
             <stop offset="100%" stop-color="#10B981" />
         </linearGradient>
         <radialGradient id="bg_grad_dark" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.12" />
+            <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.15" />
             <stop offset="100%" stop-color="#030712" stop-opacity="1" />
         </radialGradient>
         <clipPath id="canvas_clip">
@@ -63,177 +20,154 @@
     <g clip-path="url(#canvas_clip)">
         <!-- Left Panel -->
         <g transform="translate(40, 40)">
-            <rect width="400" height="530" rx="12" fill="#0F172A" fill-opacity="0.85" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <rect width="400" height="530" rx="12" fill="#0F172A" fill-opacity="0.9" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
             
-            <!-- Scanline effect -->
-            <rect class="scanline" width="400" height="3" fill="#22D3EE" opacity="0.4" />
-            
-            <!-- ASCII floating container -->
-            <g class="ascii-float">
-                <g transform="translate(30, 80)">
-                    <text x="20" y="30" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.,-:;//;:=,</text>
-<text x="20" y="44" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;:H@@@MM@M#H/.,+%;,</text>
-<text x="20" y="58" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;,/X+&#160;+M@@M@MM%=,-%HMMM@X/,</text>
-<text x="20" y="72" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;-+@MM;&#160;$M@@MH+-,;XMMMM@MMMM@+-</text>
-<text x="20" y="86" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;;@M@@M-&#160;XM@X;.&#160;-+XXXXXHHH@M@M#@/.</text>
-<text x="20" y="100" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;,%MM@@MH&#160;,@%=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.---=-=:=,.</text>
-<text x="20" y="114" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;=@#@@@MX.,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%HX$$%%%:;</text>
-<text x="20" y="128" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;=-./@M@M$&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.;@MMMM@MM:</text>
-<text x="20" y="142" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;X@/&#160;-$MM/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;+MM@@@M$</text>
-<text x="20" y="156" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">,@M@H:&#160;:@:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;=X#@@@@-</text>
-<text x="20" y="170" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">,@@@MMX,&#160;.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/H-&#160;;@M@M=</text>
-<text x="20" y="184" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">.H@@@@M@+,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;%MM+..%#$.</text>
-<text x="20" y="198" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;/MM@@@MMH,.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;XM@MH;&#160;=;</text>
-<text x="20" y="212" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;/%+%$XHH@$=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,&#160;.H@@@@MX,</text>
-<text x="20" y="226" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;.=--------.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%H.,@@@@@MX,</text>
-<text x="20" y="240" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;.%MM@@@HHHXX$$$%+-&#160;.:$MMX&#160;=M@@MM%.</text>
-<text x="20" y="254" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;=XMMM@MM@MM#H;,-+HMM@M+&#160;/MMMX=</text>
-<text x="20" y="268" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;=%@M@M#@$-.=$@MM@@@M;&#160;%M%=</text>
-<text x="20" y="282" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,:+$+-,/H#MMMMMMM@=&#160;=,</text>
-<text x="20" y="296" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;=++%%%%+/:-.</text>
-<text x="20" y="310" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;</text>
+            <g transform="translate(20, 70)">
+                <text x="25" y="30" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.,-:;//;:=,</text>
+<text x="25" y="44" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;:H@@@MM@M#H/.,+%;,</text>
+<text x="25" y="58" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;,/X+&#160;+M@@M@MM%=,-%HMMM@X/,</text>
+<text x="25" y="72" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;-+@MM;&#160;$M@@MH+-,;XMMMM@MMMM@+-</text>
+<text x="25" y="86" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;;@M@@M-&#160;XM@X;.&#160;-+XXXXXHHH@M@M#@/.</text>
+<text x="25" y="100" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;,%MM@@MH&#160;,@%=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.---=-=:=,.</text>
+<text x="25" y="114" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;=@#@@@MX.,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%HX$$%%%:;</text>
+<text x="25" y="128" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;=-./@M@M$&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.;@MMMM@MM:</text>
+<text x="25" y="142" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;X@/&#160;-$MM/&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;+MM@@@M$</text>
+<text x="25" y="156" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">,@M@H:&#160;:@:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.&#160;=X#@@@@-</text>
+<text x="25" y="170" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">,@@@MMX,&#160;.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;/H-&#160;;@M@M=</text>
+<text x="25" y="184" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">.H@@@@M@+,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;%MM+..%#$.</text>
+<text x="25" y="198" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;/MM@@@MMH,.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;XM@MH;&#160;=;</text>
+<text x="25" y="212" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;/%+%$XHH@$=&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,&#160;.H@@@@MX,</text>
+<text x="25" y="226" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;.=--------.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-%H.,@@@@@MX,</text>
+<text x="25" y="240" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;.%MM@@@HHHXX$$$%+-&#160;.:$MMX&#160;=M@@MM%.</text>
+<text x="25" y="254" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;=XMMM@MM@MM#H;,-+HMM@M+&#160;/MMMX=</text>
+<text x="25" y="268" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;=%@M@M#@$-.=$@MM@@@M;&#160;%M%=</text>
+<text x="25" y="282" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;,:+$+-,/H#MMMMMMM@=&#160;=,</text>
+<text x="25" y="296" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;=++%%%%+/:-.</text>
+<text x="25" y="310" font-family="monospace" font-size="12" fill="url(#ascii_grad_dark)">&#160;&#160;&#160;&#160;</text>
 
-                </g>
             </g>
         </g>
         
         <!-- Right Panel -->
         <g transform="translate(460, 40)">
-            <rect width="680" height="530" rx="12" fill="#0F172A" fill-opacity="0.7" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <rect width="680" height="530" rx="12" fill="#0F172A" fill-opacity="0.8" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
             
             <!-- Terminal Header -->
-            <rect width="680" height="40" rx="12" fill="rgba(255,255,255,0.08)" opacity="0.6" />
+            <rect width="680" height="40" rx="12" fill="rgba(255,255,255,0.1)" opacity="0.6" />
             <circle cx="20" cy="20" r="6" fill="#EF4444" />
             <circle cx="40" cy="20" r="6" fill="#F59E0B" />
             <circle cx="60" cy="20" r="6" fill="#10B981" />
             <text x="340" y="24" font-family="monospace" font-size="12" fill="#94A3B8" text-anchor="middle">faizal03hussain@terminal ~</text>
             
             <!-- Content -->
-            <g transform="translate(40, 80)">
+            <g transform="translate(40, 75)">
                 <!-- Greeting -->
                 <g>
-                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#F8FAFC">Hi 👋</text>
-                    <text x="0" y="35" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" font-weight="bold" fill="#F8FAFC">I'm Faizal Hussain</text>
+                    <text x="0" y="0" font-family="sans-serif" font-size="26" font-weight="bold" fill="#F8FAFC">Hi 👋</text>
+                    <text x="0" y="34" font-family="sans-serif" font-size="30" font-weight="bold" fill="#F8FAFC">I'm Faizal Hussain</text>
                 </g>
                 
-                <!-- Roles Typing -->
-                <g transform="translate(0, 75)">
-                    
-        <g class="role-group role-0">
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">Agentic AI Platform Engineer</text>
-        </g>
-        
-        <g class="role-group role-1">
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">Multi-Agent Systems Architect</text>
-        </g>
-        
-        <g class="role-group role-2">
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">NLP Engineer</text>
-        </g>
-        
-        <g class="role-group role-3">
-            <text x="0" y="0" font-family="monospace" font-size="16" fill="#22D3EE">Software Associate @ Oracle</text>
-        </g>
-        
-                    <rect class="cursor" x="275" y="-14" width="8" height="18" fill="#22D3EE" />
+                <!-- Roles -->
+                <g transform="translate(0, 70)">
+                    <text x="0" y="0" font-family="monospace" font-size="16" font-weight="bold" fill="#22D3EE">Enterprise-Scale RAG &amp; Agentic AI Systems Architect</text>
                 </g>
                 
                 <!-- Divider -->
-                <line x1="0" y1="100" x2="600" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                <line x1="0" y1="92" x2="600" y2="92" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
                 
                 <!-- Info Grid -->
-                <g transform="translate(0, 135)">
+                <g transform="translate(0, 125)">
                     
         <g transform="translate(0, 0)">
-            <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Location</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">Bengaluru, India</text>
+            <text x="0" y="0" font-family="sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Location</text>
+            <text x="130" y="0" font-family="sans-serif" font-size="14" fill="#F8FAFC">Bengaluru, India</text>
         </g>
         
-        <g transform="translate(0, 35)">
-            <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Education</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">B.Tech in AI &amp; Data Science, REVA University</text>
+        <g transform="translate(0, 32)">
+            <text x="0" y="0" font-family="sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Education</text>
+            <text x="130" y="0" font-family="sans-serif" font-size="14" fill="#F8FAFC">B.Tech in AI &amp; Data Science, REVA University</text>
         </g>
         
-        <g transform="translate(0, 70)">
-            <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Current Focus</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">Enterprise RAG &amp; Agentic AI Systems</text>
+        <g transform="translate(0, 64)">
+            <text x="0" y="0" font-family="sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Current Focus</text>
+            <text x="130" y="0" font-family="sans-serif" font-size="14" fill="#F8FAFC">Enterprise RAG &amp; Agentic AI Systems</text>
         </g>
         
-        <g transform="translate(0, 105)">
-            <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Portfolio</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">faizalhussain.in</text>
+        <g transform="translate(0, 96)">
+            <text x="0" y="0" font-family="sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Portfolio</text>
+            <text x="130" y="0" font-family="sans-serif" font-size="14" fill="#F8FAFC">faizalhussain.in</text>
         </g>
         
-        <g transform="translate(0, 140)">
-            <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Email</text>
-            <text x="120" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" fill="#F8FAFC">faizal03hussain@gmail.com</text>
+        <g transform="translate(0, 128)">
+            <text x="0" y="0" font-family="sans-serif" font-size="14" font-weight="bold" fill="#94A3B8">Email</text>
+            <text x="130" y="0" font-family="sans-serif" font-size="14" fill="#F8FAFC">faizal03hussain@gmail.com</text>
         </g>
         
                 </g>
                 
                 <!-- Skills -->
-                <g transform="translate(0, 320)">
-                    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#F8FAFC">Technical Focus</text>
-                    <g transform="translate(0, 18)">
+                <g transform="translate(0, 310)">
+                    <text x="0" y="0" font-family="sans-serif" font-size="15" font-weight="bold" fill="#F8FAFC">Technical Focus</text>
+                    <g transform="translate(0, 16)">
                         
         <g transform="translate(0, 0)">
-            <rect width="78" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="39.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Python</text>
+            <rect width="76" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="38.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Python</text>
         </g>
         
-        <g transform="translate(88, 0)">
-            <rect width="62" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="31.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Java</text>
+        <g transform="translate(84, 0)">
+            <rect width="60" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="30.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Java</text>
         </g>
         
-        <g transform="translate(160, 0)">
-            <rect width="110" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="55.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Agentic AI</text>
+        <g transform="translate(152, 0)">
+            <rect width="108" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="54.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Agentic AI</text>
         </g>
         
-        <g transform="translate(280, 0)">
-            <rect width="134" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="67.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">RAG Pipelines</text>
+        <g transform="translate(268, 0)">
+            <rect width="132" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="66.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">RAG Pipelines</text>
         </g>
         
-        <g transform="translate(424, 0)">
-            <rect width="118" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="59.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Spring Boot</text>
+        <g transform="translate(408, 0)">
+            <rect width="116" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="58.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Spring Boot</text>
         </g>
         
-        <g transform="translate(0, 40)">
-            <rect width="126" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="63.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Oracle Cloud</text>
+        <g transform="translate(0, 36)">
+            <rect width="124" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="62.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Oracle Cloud</text>
         </g>
         
-        <g transform="translate(136, 40)">
-            <rect width="86" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="43.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
+        <g transform="translate(132, 36)">
+            <rect width="84" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="42.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">FastAPI</text>
         </g>
         
-        <g transform="translate(232, 40)">
-            <rect width="182" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="91.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Multi-Agent Systems</text>
+        <g transform="translate(224, 36)">
+            <rect width="180" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="90.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Multi-Agent Systems</text>
         </g>
         
-        <g transform="translate(424, 40)">
-            <rect width="134" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="67.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Vector Search</text>
+        <g transform="translate(412, 36)">
+            <rect width="132" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="66.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Vector Search</text>
         </g>
         
-        <g transform="translate(0, 80)">
-            <rect width="126" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="63.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">Google Cloud</text>
+        <g transform="translate(0, 72)">
+            <rect width="124" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="62.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Google Cloud</text>
         </g>
         
-        <g transform="translate(136, 80)">
-            <rect width="166" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="83.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">LLM Orchestration</text>
+        <g transform="translate(132, 72)">
+            <rect width="164" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="82.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">LLM Orchestration</text>
         </g>
         
-        <g transform="translate(312, 80)">
-            <rect width="102" height="30" rx="15" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.4" stroke-width="1" />
-            <text x="51.0" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#F8FAFC" text-anchor="middle">LangChain</text>
+        <g transform="translate(304, 72)">
+            <rect width="100" height="28" rx="14" fill="#0F172A" stroke="#7C3AED" stroke-opacity="0.5" stroke-width="1" />
+            <text x="50.0" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">LangChain</text>
         </g>
         
                     </g>
@@ -243,23 +177,23 @@
                 <g transform="translate(0, 425)">
                     
         <g transform="translate(0, 0)">
-            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">GitHub</text>
+            <rect width="85" height="28" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <text x="42.5" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">GitHub</text>
         </g>
         
-        <g transform="translate(100, 0)">
-            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">LinkedIn</text>
+        <g transform="translate(95, 0)">
+            <rect width="85" height="28" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <text x="42.5" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">LinkedIn</text>
         </g>
         
-        <g transform="translate(200, 0)">
-            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Website</text>
+        <g transform="translate(190, 0)">
+            <rect width="85" height="28" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <text x="42.5" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Website</text>
         </g>
         
-        <g transform="translate(300, 0)">
-            <rect width="85" height="30" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-            <text x="42.5" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Email</text>
+        <g transform="translate(285, 0)">
+            <rect width="85" height="28" rx="6" fill="#0F172A" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <text x="42.5" y="19" font-family="sans-serif" font-size="12" fill="#F8FAFC" text-anchor="middle">Email</text>
         </g>
         
                 </g>
