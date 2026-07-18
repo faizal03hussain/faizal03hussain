@@ -6,7 +6,7 @@ def generate_svg(theme):
     
     bg = '#030712' if is_dark else '#FFFFFF'
     panel_bg = '#0F172A' if is_dark else '#F8FAFC'
-    border = 'rgba(255,255,255,0.1)' if is_dark else 'rgba(15,23,42,0.1)'
+    border = '#1E293B' if is_dark else '#E2E8F0'
     primary_text = '#F8FAFC' if is_dark else '#0F172A'
     secondary_text = '#94A3B8' if is_dark else '#475569'
     
@@ -125,7 +125,7 @@ def generate_svg(theme):
             <rect width="680" height="530" rx="12" fill="{panel_bg}" fill-opacity="0.8" stroke="{border}" stroke-width="1" />
             
             <!-- Terminal Header -->
-            <rect width="680" height="40" rx="12" fill="{border}" opacity="0.6" />
+            <rect width="680" height="40" rx="12" fill="{border}" fill-opacity="0.6" />
             <circle cx="20" cy="20" r="6" fill="#EF4444" />
             <circle cx="40" cy="20" r="6" fill="#F59E0B" />
             <circle cx="60" cy="20" r="6" fill="#10B981" />
