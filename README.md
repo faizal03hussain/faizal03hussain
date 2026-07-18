@@ -1,12 +1,5 @@
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/light.svg">
-    <img alt="Faizal Hussain - Hero Banner" src="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/dark.svg" width="100%">
-  </picture>
-</div>
-
-<br>
+![Faizal Hussain - Hero Banner](dark.svg#gh-dark-mode-only)
+![Faizal Hussain - Hero Banner](light.svg#gh-light-mode-only)
 
 # 💫 About Me
 
