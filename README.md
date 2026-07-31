@@ -1,146 +1,575 @@
-<div align="center">
+<p align="center">
+<img src="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/hero_banner.svg" alt="Hero Banner" width="1180" />
+</p>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/light.svg">
-  <img alt="Faizal Hussain — AI/ML Engineer" src="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/dark.svg" width="100%">
-</picture>
 
-</div>
 
-<br>
 
-## 💫 About Me
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=faizal03hussain&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&bg_color=030712&title_color=22d3ee&icon_color=7c3aed&text_color=94a3b8" width="49%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=faizal03hussain&theme=github_dark&hide_border=true&bg_color=030712&ring=22d3ee&fire=7c3aed&currStreakNum=34d399&sideNums=94a3b8&sideLabels=f8fafc&currStreakLabel=10b981" width="49%" />
+</p>
 
-🔭 Software Associate at **Oracle (OFSS)**, building enterprise-scale Spring Boot microservices for Lending, Collateral Management, and Payments within the **Oracle Banking Microservices Suite (OBMA)** — plus internal AI tooling: an **OracleAI Workbench** for code analysis, patch generation, and log analysis; **OraFlow**, an AI-driven workflow platform for RAG pipelines and agentic connectors; and an **Autonomous QA Workbench** using multi-agent orchestration for end-to-end UI testing.
 
-🌱 Currently sharpening: agent orchestration, hybrid retrieval, MCP server integrations, and LLM fine-tuning / optimization (LoRA, QLoRA).
 
-👯 Open to collaborating on production-grade AI systems — enterprise RAG, autonomous agents, and internal AI platforms.
 
-🤝 Looking for help with hard problems at scale — LLM evaluation, latency optimization, vector database design, and enterprise MLOps.
+🧠 What I Do
 
-🎓 B.Tech in Artificial Intelligence & Data Science, REVA University — CGPA 9.22/10.
+I'm a Software Associate at Oracle (OFSS ) building enterprise-scale AI systems. My work sits at the intersection of Large Language Models, Retrieval-Augmented Generation (RAG), and Agentic AI — designing production-grade platforms that power intelligent document querying, autonomous workflows, and multi-agent orchestration at scale.
 
-📫 **faizal03hussain@gmail.com**
+Previously, I engineered LLM-powered NLP pipelines at PharmaACE, including a domain-specific NL2SQL system that improved business data accessibility by 70%, and a multi-agent RAG chatbot that increased engagement by 2.5x.
 
-<br>
 
-## 💼 Experience
 
-**Software Associate — Global Banking Solutions**, Oracle (OFSS), Bengaluru · *Aug 2025 – Present*
-- Enterprise Spring Boot microservices for Lending, Collateral Management, and Payments (OBMA)
-- Built OracleAI Workbench (code analysis, patch generation, log analysis, MCP integrations, custom AI skills)
-- Engineered OraFlow — AI-driven workflow platform for RAG pipelines, connectors, and agentic workflows
-- Built an Autonomous QA Workbench using multi-agent orchestration + internal RAG for self-improving UI test agents
 
-**NLP Intern Engineer — Tech NLP**, PharmaACE Innovations LLP, Pune · *Aug 2024 – May 2025*
-- Built LLM-powered NL2SQL analytics tools, cutting manual analysis time by 60%
-- Designed a multi-agent RAG chatbot with centralized vector orchestration, lifting engagement 2.5×
-- Optimized vector retrieval pipelines, reducing latency by 35%
+🏗️ Current Work
 
-<br>
+Area
+Details
+Oracle AI Workbench
+AI-powered code analysis, patch generation, log analysis, and MCP integrations
+OraFlow
+AI-driven workflow platform for RAG pipelines and agentic automation
+Autonomous QA Workbench
+Multi-agent orchestration for end-to-end UI testing with self-improving agents
+Oracle Banking Microservices
+Enterprise-scale Spring Boot systems for Lending, Collateral, and Payments
 
-## 🚀 Featured Projects
 
-**Finionix AI** — Multi-agent financial intelligence platform with hierarchical cognitive agent orchestration, RAG over hybrid vector-semantic embeddings for sub-50ms inference, adaptive LLM gateway with circuit-breaker failover, and SSE streaming for zero-latency token rendering.
-`Python` `FastAPI` `React` `Multi-Agent Orchestration` `RAG` `Vector Embeddings`
 
-**Two-Way Sign Language Communication System** — Real-time multimodal system for gesture-to-speech and speech-to-sign translation using IoT sensor streams, NLP pipelines, the Web Speech API, and Blender-based avatar rendering.
-`Python` `Django` `JavaScript` `NLP` `Arduino` `Web Speech API`
 
-**NER-Based Smart Resume Parser** — ATS-style resume intelligence pipeline using custom spaCy NER models, regex heuristics, and rule-based inference for structured parsing and skill extraction.
-`Python` `spaCy` `PDFMiner` `docx2txt` `RegEx`
 
-<br>
 
-## 🧰 Tech Stack
 
-**Languages**
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=postgresql&logoColor=white)
+💼 Experience
 
-**Agentic AI & LLM Orchestration**
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![CrewAI](https://img.shields.io/badge/CrewAI-FF6B35?style=for-the-badge&logo=robotframework&logoColor=white)
-![LlamaIndex](https://img.shields.io/badge/LlamaIndex-000000?style=for-the-badge&logo=llama&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![MCP](https://img.shields.io/badge/MCP%20Servers-4B0082?style=for-the-badge)
+Oracle (OFSS) — Bengaluru, India
 
-**Backend**
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![SpringBoot](https://img.shields.io/badge/springboot-%236DB33F.svg?style=for-the-badge&logo=springboot&logoColor=white)
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+Software Associate — Global Banking Solutions | Aug 2025 – Present
 
-**ML / NLP**
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![spaCy](https://img.shields.io/badge/spaCy-09A3D5?style=for-the-badge&logo=spacy&logoColor=white)
+Engineered enterprise-grade AI and microservices solutions powering Oracle Banking Microservices Suite (OBMA). Built the OracleAI Workbench — an AI-powered platform for code analysis, patch generation, and MCP integrations — alongside OraFlow, an AI-driven workflow platform for RAG pipelines and agentic automation using natural language prompts.
 
-**Cloud & Data**
-![OracleCloud](https://img.shields.io/badge/Oracle%20Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![GoogleCloud](https://img.shields.io/badge/GoogleCloud%20%28Vertex%20AI%2FGemini%29-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+PharmaACE Innovations LLP — Pune, Maharashtra
 
-<br>
+NLP Intern Engineer — Tech NLP | Aug 2024 – May 2025
 
-## 📜 Certifications
+Built LLM-powered analytics tools converting natural language queries into SQL, reducing manual analysis time by 60%. Developed a domain-specific NL2SQL system improving data accessibility by 70%, and designed a multi-agent RAG-based chatbot increasing engagement 2.5x with optimized vector retrieval (35% latency reduction).
 
-- Oracle Cloud Infrastructure Generative AI Certified Professional — Oracle
-- Oracle AI Vector Search Certified Professional — Oracle
-- Google AI Professional — Google
-- Google Cloud Generative AI Leader Specialization — Google Cloud
-- Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate — Oracle
-- Databricks Accredited Generative AI Fundamentals — Databricks
-- Databricks Accredited AI Agents Fundamentals — Databricks
-- Artificial Intelligence Fundamentals — IBM
-- Dell GenAI Foundations Proven Professional — Dell Technologies
-- Qualcomm AI Technical Foundations — Qualcomm
 
-## 🏅 Achievements
 
-- 🥉 2nd Runner-up, international hackathon **SHECODES** — awarded ₹30,000, recognized for "Most Innovative Project" in Open Innovation
-- 🏆 Top 5 Innovative Endeavors, Project Expo, Bangalore Institute of Technology
 
-<br>
+🎓 Education
 
-## 📊 GitHub Stats
+Degree
+Institution
+Year
+CGPA
+B.Tech in AI & Data Science
+REVA University
+Dec 2021 – Jul 2025
+9.22 / 10
 
-<div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=faizal03hussain&theme=radical&hide_border=true&include_all_commits=true&count_private=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=faizal03hussain&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact" />
 
-<img src="https://nirzak-streak-stats.vercel.app/?user=faizal03hussain&theme=radical&hide_border=true" />
 
-</div>
 
-## 🏆 GitHub Trophies
 
-<div align="center">
 
-![](https://github-profile-trophy.vercel.app/?username=faizal03hussain&theme=radical&no-frame=true&margin-w=4)
+🚀 Featured Projects
 
-</div>
+Finionix AI — Multi-Agent Financial Intelligence Platform
 
-<br>
+Engineered an autonomous financial copilot enabling real-time portfolio analytics, predictive expense intelligence, and agentic financial advisory through multi-turn conversational reasoning. Architected with hierarchical cognitive agent orchestration, RAG over hybrid vector-semantic embeddings for sub-50ms inference, adaptive LLM gateway with circuit-breaker failover, and SSE streaming for zero-latency token rendering.
 
-## 🌐 Connect With Me
 
-<div align="center">
+Stack: Python, FastAPI, React, Multi-Agent Orchestration, RAG, Vector Embeddings, SSE Streaming
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/faizal-hussain03)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.faizalhussain.in/)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/faizalhussain.03)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:faizal03hussain@gmail.com)
+Two-Way Sign Language Communication System
 
-</div>
+Built a real-time multimodal sign language system enabling gesture-to-speech and speech-to-sign translation using IoT sensor streams, NLP pipelines, Web Speech API, and Blender-based avatar rendering.
 
-<div align="center">
 
-[![](https://visitcount.itsvg.in/api?id=faizal03hussain&icon=0&color=0)](https://visitcount.itsvg.in)
+Stack: Python, Django, JavaScript, NLP, Arduino, Web Speech API, Blender
 
-</div>
+NER-Based Smart Resume Parser
 
-<!-- Hero banner: pure SVG + SMIL animation, no JS. Handcrafted for github.com/faizal03hussain -->
+Developed an ATS-style resume intelligence pipeline using custom spaCy NER models, regex heuristics, and rule-based inference for structured parsing, skill extraction, and recommendation generation.
+
+
+Stack: Python, spaCy, PDFMiner, docx2txt, YAML, RegEx, NLP
+
+
+
+
+🏆 Achievements
+
+•
+2nd Runner-up at international hackathon SHECODES — awarded INR 30,000 and "Most Innovative Project" in Open Innovation
+
+•
+Top 5 Innovative Endeavors at Project Expo, Bangalore Institute of Technology
+
+
+
+
+📜 Certifications
+
+Certification
+Issuer
+Oracle Cloud Infrastructure Generative AI Certified Professional
+Oracle
+Oracle AI Vector Search Certified Professional
+Oracle
+Google AI Professional
+Google
+Google Cloud Generative AI Leader Specialization
+Google Cloud
+Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+Oracle
+Databricks Accredited Generative AI Fundamentals
+Databricks
+Databricks Accredited AI Agents Fundamentals
+Databricks
+Dell GenAI Foundations Proven Professional
+Dell Technologies
+Artificial Intelligence Fundamentals
+IBM
+Qualcomm AI Technical Foundations
+Qualcomm
+
+
+
+
+
+
+
+🛠️ Tech Stack
+
+<p align="center">
+
+Languages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AI / ML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Frameworks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AI & Data Tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cloud & DevOps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Databases
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Enterprise & Other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
+
+
+
+
+🌐 Connect With Me
+
+<p align="center">
+<a href="https://linkedin.com/in/faizal-hussain03">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  &nbsp;
+  <a href="https://www.faizalhussain.in/">
+    <img src="https://img.shields.io/badge/Portfolio-030712?style=for-the-badge&logo=google-chrome&logoColor=22d3ee" alt="Portfolio" />
+  </a>
+  &nbsp;
+  <a href="mailto:faizal03hussain@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+</p> <p align="center">
+  <a href="https://github.com/faizal03hussain">
+    <img src="https://visitcount.itsvg.in/api?id=faizal03hussain&icon=2&color=8" alt="Profile Views" />
+  </a>
+</p> <p align="center">
+  <em>Built with passion at the intersection of AI and Engineering.</em>
+</p>
+
