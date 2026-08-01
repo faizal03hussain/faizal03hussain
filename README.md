@@ -1,8 +1,10 @@
 <p align="center">
 <img src="https://raw.githubusercontent.com/faizal03hussain/faizal03hussain/main/hero_banner.svg" alt="Hero Banner" width="1180" />
 </p> <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=faizal03hussain&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&bg_color=030712&title_color=22d3ee&icon_color=7c3aed&text_color=94a3b8" width="49%" />
+  <img src="https://github-readme-stats.shion.dev/api?username=faizal03hussain&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true&show_icons=true&bg_color=030712&title_color=22d3ee&icon_color=7c3aed&text_color=94a3b8" width="49%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=faizal03hussain&theme=github_dark&hide_border=true&bg_color=030712&ring=22d3ee&fire=7c3aed&currStreakNum=34d399&sideNums=94a3b8&sideLabels=f8fafc&currStreakLabel=10b981" width="49%" />
+</p> <p align="center">
+  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=faizal03hussain&theme=github_dark&hide_border=true&bg_color=030712&title_color=22d3ee&icon_color=7c3aed&text_color=94a3b8&layout=compact&langs_count=8" width="49%" />
 </p>
 
 
